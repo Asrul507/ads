@@ -37,19 +37,25 @@ body {
 }
 
 .nav-links li a {
-  background-color: #007BFF; /* Warna biru */
+  background: linear-gradient(to bottom, #1fa463, #178a4f); /* Gradasi hijau */
   color: white;
   padding: 10px 15px;
   margin: 0 5px;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-shadow: 0 4px #0f5e38; /* Shadow bawah biar efek 3D */
   text-decoration: none;
+  font-weight: bold;
   display: inline-block;
-  transition: background-color 0.3s ease;
+  transition: all 0.2s ease-in-out;
+  border: none;
 }
 
 .nav-links li a:hover {
-  background-color: #0056b3; /* Biru tua saat hover */
+  transform: translateY(2px);
+  box-shadow: 0 2px #0f5e38;
+  background: linear-gradient(to bottom, #178a4f, #126b3e); /* sedikit gelap saat hover */
 }
+
 
 /* Hero Section */
 .hero {
