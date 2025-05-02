@@ -267,12 +267,12 @@ footer {
   border-top: 1px solid #ccc;
 }
 
-/* WhatsApp Button */
-.whatsapp-button {
+/* Konsultasi Button */
+.konsultasi-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25D366;
+  background-color: #28a745; /* Warna hijau */
   color: white;
   padding: 12px 20px;
   border-radius: 50px;
@@ -286,9 +286,13 @@ footer {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.whatsapp-button:hover {
-  background-color: #1ebe5d;
+.konsultasi-button:hover {
+  background-color: #218838; /* Warna hijau lebih gelap saat hover */
   transform: scale(1.1);
+}
+
+.konsultasi-button i {
+  font-size: 20px;
 }
 
 /* Animasi Fade In */
