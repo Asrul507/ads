@@ -82,7 +82,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background:rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -99,13 +99,17 @@ body {
 }
 
 .card {
-  background: url('../images/background.png');
-  max-width: 350px; /* Ukuran maksimum card */
-  width: 3500%; /* Sesuaikan dengan ukuran layar */
+ background: rgba(255, 255, 255, 0.8);
+  width: 350px; /* Ukuran tetap lebar card */
+  height: 350px; /* Ukuran tetap tinggi card untuk bentuk persegi */
   padding: 20px; /* Ruang di dalam card */
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto; /* Menjaga card tetap di tengah */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .hero h1 {
