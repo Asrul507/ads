@@ -286,29 +286,19 @@ footer {
   }
 }
 
-/* Portfolio Section - Updated */
-.portfolio {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.portfolio h2 {
-  margin-bottom: 40px;
-}
-
-.portfolio-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
+//* Portfolio Card with Dotted Border and Centered Text */
 .portfolio-gallery .card {
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  text-align: center; /* Teks secara horizontal di tengah */
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Mengatur elemen dalam card menjadi kolom */
+  justify-content: center; /* Menjaga teks agar berada di tengah secara vertikal */
+  align-items: center; /* Menjaga teks agar berada di tengah secara horizontal */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px dotted #007BFF; /* Garis putus-putus dengan warna biru */
 }
 
 .portfolio-gallery .card h3 {
@@ -329,10 +319,6 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio-gallery .card img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
 /* Animation: Fade In Up on Scroll */
 @keyframes fadeInUpScroll {
   from {
