@@ -52,25 +52,36 @@
     </div>
   </section>
 
-  <section id="portofolio" class="portfolio">
-    <h2>Jenis system Aplikasi yang siap kami buatkan :</h2>
-    <div class="portfolio-gallery">
-      <div class="card">
-       <h3>System management perhotelan</h3
+ <section id="portofolio" class="portfolio">
+  <h2>Jenis sistem Aplikasi yang siap kami buatkan :</h2>
+  <div class="portfolio-gallery">
+    <div class="card scroll-animate">
+      <h3>System management perhotelan</h3>
+      <p>Kelola database tamu dan kamar, check in dan check out, serta pelaporan yang lebih simple.</p>
       <img src="images/portfolio1.png" alt="System perhotelan/guest house" />
-       <p>Kelola database tamu dan kamar, check in dadn check out, serta  pelaporan yang lebih simple</p>
-       </div>
-      <img src="images/portfolio2.png" alt="Kasir toko atau warung" />
-
-      <img src="images/portfolio3.png" alt="inventory stock" />
-
-      <img src="images/portfolio4.png" alt="absensi dengan foto,barcode, NFC" />
-
-      <img src="images/portfolio5.png" alt="Dan system pengolahan data lainnya bisa kita buatkan untuk mempermudah usahamu" />
-
-    
     </div>
-  </section>
+    <div class="card scroll-animate">
+      <h3>Kasir toko atau warung</h3>
+      <p>Aplikasi kasir untuk warung dan UMKM, mendukung berbagai metode pembayaran dan laporan harian.</p>
+      <img src="images/portfolio2.png" alt="Kasir toko atau warung" />
+    </div>
+    <div class="card scroll-animate">
+      <h3>Inventory dan stok barang</h3>
+      <p>Pantau stok masuk dan keluar dengan laporan otomatis yang akurat.</p>
+      <img src="images/portfolio3.png" alt="inventory stock" />
+    </div>
+    <div class="card scroll-animate">
+      <h3>Absensi Karyawan</h3>
+      <p>Absensi via foto, barcode, atau NFC dengan log lokasi dan waktu.</p>
+      <img src="images/portfolio4.png" alt="absensi dengan foto, barcode, NFC" />
+    </div>
+    <div class="card scroll-animate">
+      <h3>Layanan Kustom</h3>
+      <p>Butuh aplikasi lain? Kami bisa bantu bangun sistem sesuai kebutuhan usahamu.</p>
+      <img src="images/portfolio5.png" alt="Aplikasi custom lainnya" />
+    </div>
+  </div>
+</section>
 
   <section id="pricing" class="pricing">
     <h2>Harga Jasa Pembuatan AppSheet</h2>
@@ -101,6 +112,20 @@
 <a href="https://wa.me/6285159158228" class="whatsapp-button" target="_blank">
   <i class="fab fa-whatsapp"></i> Hubungi Kami
 </a>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>

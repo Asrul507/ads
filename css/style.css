@@ -285,3 +285,72 @@ footer {
     max-width: 90%;
   }
 }
+
+/* Portfolio Section - Updated */
+.portfolio {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.portfolio h2 {
+  margin-bottom: 40px;
+}
+
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-gallery .card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-gallery .card h3 {
+  color: #007BFF;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.portfolio-gallery .card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.portfolio-gallery .card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-gallery .card img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+/* Animation: Fade In Up on Scroll */
+@keyframes fadeInUpScroll {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+  animation: fadeInUpScroll 0.8s ease-out forwards;
+}
