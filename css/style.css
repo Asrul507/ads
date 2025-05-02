@@ -13,12 +13,7 @@ body {
 
 /* Navbar */
 .navbar {
-  position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('images/nav-background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #006ac7; /* Biru terang */
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -37,24 +32,26 @@ body {
 }
 
 .nav-links li a {
-  background: linear-gradient(to bottom, #1fa463, #178a4f); /* Gradasi hijau */
-  color: white;
-  padding: 10px 15px;
-  margin: 0 5px;
+  background: linear-gradient(to bottom, #000ac7, #0007a5); /* Gradasi biru gelap */
+  color: #ffffff;
+  padding: 10px 18px;
+  margin: 0 6px;
   border-radius: 8px;
-  box-shadow: 0 4px #0f5e38; /* Shadow bawah biar efek 3D */
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
   display: inline-block;
+  box-shadow: 0 4px 0 #00055e; /* Efek 3D bawah */
   transition: all 0.2s ease-in-out;
   border: none;
 }
 
+
 .nav-links li a:hover {
   transform: translateY(2px);
-  box-shadow: 0 2px #0f5e38;
-  background: linear-gradient(to bottom, #178a4f, #126b3e); /* sedikit gelap saat hover */
+  box-shadow: 0 2px 0 #00055e;
+  background: linear-gradient(to bottom, #0009b2, #00058f);
 }
+
 
 
 /* Hero Section */
