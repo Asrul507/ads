@@ -194,3 +194,6 @@ footer {
     align-items: center;
   }
 }
+.site-logo img {
+    width: 40px; 
+}
