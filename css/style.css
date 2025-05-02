@@ -352,3 +352,27 @@ footer {
   box-shadow: 0 6px 0 #00055e; /* Bayangan lebih tajam */
   background: linear-gradient(to bottom, #0009b2, #00058f);
 }
+
+
+/* Navbar */
+.navbar {
+  background-color: #006ac7; /* Biru terang */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* Menambahkan position relative agar nav bisa diposisikan dengan benar */
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  position: absolute; /* Posisi absolute untuk menempatkan navbar links di pojok kanan */
+  right: 20px; /* Mengatur jarak dari sisi kanan */
+}
+
