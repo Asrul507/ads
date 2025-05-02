@@ -202,3 +202,25 @@ footer {
   width: 150px; /* Ubah sesuai ukuran yang diinginkan */
   height: auto; /* Menjaga proporsi gambar */
 }
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366; /* Warna hijau WhatsApp */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe5d;
+}
