@@ -340,3 +340,45 @@ footer {
 .scroll-animate.visible {
   animation: fadeInUpScroll 0.8s ease-out forwards;
 }
+/* Spacing antar section */
+section {
+  padding: 60px 20px;
+}
+
+/* Jarak antar section */
+section + section {
+  margin-top: 40px;
+}
+
+/* Spacing antar section */
+section {
+  padding: 60px 20px;
+}
+
+/* Jarak antar section */
+section + section {
+  margin-top: 40px;
+  border-top: 1px dashed #ccc;
+  padding-top: 60px;
+}
+
+/* Optional: Warna background berbeda (ubah sesuai selera) */
+#beranda {
+  background-color: #ffffff;
+}
+
+.features {
+  background-color: #f9f9f9;
+}
+
+.portfolio {
+  background-color: #ffffff;
+}
+
+.pricing {
+  background-color: #f1f1f1;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+}
