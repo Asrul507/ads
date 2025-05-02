@@ -13,16 +13,18 @@ body {
 
 /* Navbar */
 .navbar {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('images/nav-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #007BFF;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
 }
+
 
 .navbar .logo img {
   height: 40px;
