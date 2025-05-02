@@ -35,14 +35,18 @@ body {
 }
 
 .nav-links li a {
+  background-color: #007BFF; /* Warna biru */
+  color: white;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #007BFF;
+  background-color: #0056b3; /* Biru tua saat hover */
 }
 
 /* Hero Section */
@@ -194,6 +198,7 @@ footer {
     align-items: center;
   }
 }
-.site-logo img {
-    width: 40px; 
+.logo img {
+  width: 150px; /* Ubah sesuai ukuran yang diinginkan */
+  height: auto; /* Menjaga proporsi gambar */
 }
