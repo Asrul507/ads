@@ -27,16 +27,6 @@ body {
   z-index: 999;
 }
 
-.navbar::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  z-index: 0;
-}
-
 .navbar > * {
   position: relative;
   z-index: 1;
@@ -74,25 +64,16 @@ body {
   background: linear-gradient(to bottom, #0009b2, #00058f);
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    position: static;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-  }
-}
-
 /* Hero Section */
 .hero {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Menyusun elemen di tengah */
-  align-items: center; /* Menyusun elemen di tengah secara vertikal */
+  justify-content: center; 
+  align-items: center; 
   padding: 4rem 2rem;
   background-color: #e6f0ff;
   gap: 2rem;
-  margin-top: 70px; /* Added margin-top */
+  margin-top: 70px; 
 }
 
 .hero h1,
@@ -118,10 +99,6 @@ body {
   animation-delay: 0.5s;
 }
 
-.hero-content {
-  max-width: 600px;
-}
-
 .hero-image {
   flex: 1;
   min-width: 250px;
@@ -135,12 +112,11 @@ body {
   border-radius: 10px;
 }
 
-/* Responsif untuk mobile */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
     padding: 2rem 1rem;
-    margin-top: 100px; /* Menyesuaikan margin untuk tampilan mobile */
+    margin-top: 100px; 
   }
 
   .hero h1 {
@@ -156,23 +132,11 @@ body {
   }
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-}
-
-.hero {
-  padding-top: 120px; /* Fixed padding issue */
-}
-
 /* Features Section */
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif */
-  gap: 30px; /* Jarak antar item */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; 
   padding: 0 20px;
 }
 
@@ -186,7 +150,7 @@ header {
 
 .feature i {
    font-size: 48px;
-  color: #2c8de8; /* Sesuaikan dengan warna icon */
+  color: #2c8de8;
 }
 
 .feature h3 {
@@ -200,22 +164,6 @@ header {
   font-size: 16px;
   color: #555;
 }
-
-/* Section Features Header */
-.features h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 28px;
-  font-weight: 700;
-  color: #333; /* Warna teks yang lebih gelap agar terlihat kontras */
-}
-
-@media screen and (min-width: 768px) {
-  .features h2 {
-    font-size: 36px; /* Menyesuaikan ukuran font pada layar besar */
-  }
-}
-
 
 /* Portfolio Section */
 .portfolio {
@@ -306,27 +254,49 @@ header {
   color: #007BFF;
 }
 
-/* Contact Section */
-.contact {
-  padding: 60px 20px;
+/* Card Styling with 3D Effect */
+.card-3d {
+  background: linear-gradient(135deg, #1ca9e1, #4a4ae0);
+  color: #333;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  width: 300px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  margin: 20px auto;
 }
 
-.contact h2 {
-  margin-bottom: 20px;
+.card-3d:hover {
+  transform: translateY(-10px) rotate(3deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-.contact p {
-  margin-bottom: 30px;
+.card-3d h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
-/* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  border-top: 1px solid #ccc;
+.card-3d p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .card-3d {
+    width: 90%;
+  }
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+  animation: fadeInUpScroll 0.8s ease-out forwards;
 }
 
 /* Konsultasi Button */
@@ -334,7 +304,7 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #28a745; /* Warna hijau */
+  background-color: #28a745; 
   color: white;
   padding: 12px 20px;
   border-radius: 50px;
@@ -349,7 +319,7 @@ footer {
 }
 
 .konsultasi-button:hover {
-  background-color: #218838; /* Warna hijau lebih gelap saat hover */
+  background-color: #218838;
   transform: scale(1.1);
 }
 
@@ -369,7 +339,6 @@ footer {
   }
 }
 
-/* Scroll Animation */
 @keyframes fadeInUpScroll {
   from {
     opacity: 0;
@@ -381,52 +350,7 @@ footer {
   }
 }
 
-.scroll-animate {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.pricing-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.pricing-card {
-  flex: 1 1 300px;
-  max-width: 400px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Inter', sans-serif;
-  text-align: center;
-}
-@media (max-width: 600px) {
-  .pricing-card {
-    flex: 1 1 100%;
-  }
-}
-
-
-.scroll-animate.visible {
-  animation: fadeInUpScroll 0.8s ease-out forwards;
-}
-
-/* Section Spacing */
-section {
-  padding: 60px 20px;
-}
-
-section + section {
-  margin-top: 40px;
-  border-top: 1px dashed #ccc;
-  padding-top: 60px;
-}
-
+/* Form Section */
 #form-request {
   display: flex;
   justify-content: center;
@@ -484,45 +408,22 @@ section + section {
   margin-right: 20px;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.hero {
-  padding-top: 120px; /* Fixed padding issue */
-}
-
-
-/* Card Styling */
-.card {
-  width: 100%; /* Membuat card mengambil lebar penuh */
-  max-width: 800px; /* Maksimal lebar card 800px */
-  margin: 20px auto; /* Memberikan jarak atas dan bawah serta auto margin untuk center */
-  padding: 20px; /* Memberikan padding di dalam card */
-  background-color: #f9f9f9; /* Warna latar belakang card */
-  border-radius: 8px; /* Menambahkan sudut membulat pada card */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
-  font-family: 'Inter', sans-serif; /* Menggunakan font Inter */
-}
-
 .hero-card {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 50px 20px; /* Padding tambahan untuk hero card */
+  padding: 50px 20px;
 }
 
 .hero-text {
-  max-width: 1000px; /* Membatasi lebar text hero agar tidak terlalu panjang */
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .cta-button {
   padding: 10px 20px;
-  background-color: #4CAF50; /* Tombol dengan latar belakang hijau */
+  background-color: #4CAF50; 
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -531,72 +432,5 @@ section + section {
 }
 
 .cta-button:hover {
-  background-color: #45a049; /* Efek hover untuk tombol */
-}
-
-.features {
-  display: flex;
-  flex-direction: row; /* Ubah dari column ke row */
-  justify-content: center; /* Bisa juga pakai space-between atau space-around sesuai kebutuhan */
-  flex-wrap: wrap; /* Agar item pindah ke baris baru jika tidak muat */
-  gap: 20px; /* Spasi antar item */
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-}
-
-
-.features h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 40px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.feature {
-  text-align: center;
-  max-width: 300px;
-  flex: 1 1 250px;
-  margin: 10px;
-}
-.features-header {
-  text-align: center;
-  font-size: 2rem;
-  color: #333;
-  font-weight: 700;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding-top: 20px;
-}
-
-.card-3d {
-  background: linear-gradient(135deg, #1ca9e1, #4a4ae0s);
-  color: #333;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-  width: 300px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Inter', sans-serif;
-  margin: 20px auto;
-}
-
-.card-3d h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.card-3d p {
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-@media (max-width: 768px) {
-  .card-3d {
-    width: 90%;
-  }
+  background-color: #45a049;
 }
