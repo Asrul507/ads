@@ -392,3 +392,14 @@ section + section {
   border-color: #007BFF;
   outline: none;
 }
+.logo {
+  height: 50px;
+  width: auto;
+  margin-right: 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
