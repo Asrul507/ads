@@ -87,7 +87,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: url('../images/background.png') center/cover no-repeat;
+  background: #dad8f2;
   height: 100vh;
   display: flex;
   align-items: center;
