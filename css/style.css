@@ -27,8 +27,6 @@ body {
   z-index: 999;
 }
 
-
-
 .navbar::before {
   content: '';
   position: absolute;
@@ -136,6 +134,68 @@ body {
 .btn:hover {
   background-color: #0056b3;
   transform: translateY(-5px);
+}
+
+/* Hero Content Layout */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+  background-color: #e6f0ff;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #004aad;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    margin-top: 1.5rem;
+  }
 }
 
 /* Features Section */
@@ -392,6 +452,7 @@ section + section {
   border-color: #007BFF;
   outline: none;
 }
+
 .logo {
   height: 100px;
   width: auto;
@@ -403,66 +464,6 @@ section + section {
   align-items: center;
   justify-content: space-between;
 }
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 4rem 2rem;
-  background-color: #e6f0ff;
-  gap: 2rem;
-}
-
-.hero-text {
-  flex: 1;
-  min-width: 280px;
-  max-width: 600px;
-}
-
-.hero h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-  color: #004aad;
-}
-
-.hero p {
-  font-size: 1.05rem;
-  margin-bottom: 1.2rem;
-  line-height: 1.6;
-}
-
-.hero-image {
-  flex: 1;
-  min-width: 250px;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Responsif untuk mobile */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    padding: 2rem 1rem;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero-image {
-    margin-top: 1.5rem;
-  }
-}
 
 header {
   position: fixed;
@@ -470,8 +471,4 @@ header {
   left: 0;
   width: 100%;
   z-index: 999;
-}
-
-.hero {
-  padding-top: 100px; /* Untuk mendorong konten ke bawah */
 }
