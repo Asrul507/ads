@@ -463,3 +463,15 @@ section + section {
     margin-top: 1.5rem;
   }
 }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.hero {
+  padding-top: 100px; /* Untuk mendorong konten ke bawah */
+}
