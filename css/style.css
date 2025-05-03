@@ -186,7 +186,7 @@ header {
 
 .feature i {
    font-size: 48px;
-  color: #4CAF50; /* Sesuaikan dengan warna icon */
+  color: #2c8de8; /* Sesuaikan dengan warna icon */
 }
 
 .feature h3 {
@@ -508,11 +508,14 @@ section + section {
 
 .features {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row; /* Ubah dari column ke row */
+  justify-content: center; /* Bisa juga pakai space-between atau space-around sesuai kebutuhan */
+  flex-wrap: wrap; /* Agar item pindah ke baris baru jika tidak muat */
+  gap: 20px; /* Spasi antar item */
   padding: 60px 20px;
   background-color: #f9f9f9;
 }
+
 
 .features h2 {
   text-align: center;
