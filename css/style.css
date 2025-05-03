@@ -530,4 +530,14 @@ section + section {
   flex: 1 1 250px;
   margin: 10px;
 }
+.features-header {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 20px;
+}
 
