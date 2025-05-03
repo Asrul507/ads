@@ -438,3 +438,43 @@ section + section {
 .hero {
   padding-top: 120px; /* Fixed padding issue */
 }
+
+
+/* Card Styling */
+.card {
+  width: 100%; /* Membuat card mengambil lebar penuh */
+  max-width: 800px; /* Maksimal lebar card 800px */
+  margin: 20px auto; /* Memberikan jarak atas dan bawah serta auto margin untuk center */
+  padding: 20px; /* Memberikan padding di dalam card */
+  background-color: #f9f9f9; /* Warna latar belakang card */
+  border-radius: 8px; /* Menambahkan sudut membulat pada card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  font-family: 'Inter', sans-serif; /* Menggunakan font Inter */
+}
+
+.hero-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px; /* Padding tambahan untuk hero card */
+}
+
+.hero-text {
+  max-width: 1000px; /* Membatasi lebar text hero agar tidak terlalu panjang */
+  margin: 0 auto;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Tombol dengan latar belakang hijau */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #45a049; /* Efek hover untuk tombol */
+}
