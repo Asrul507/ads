@@ -151,6 +151,16 @@
 
   document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
 </script>
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function(event) {
+    // Tunggu sebentar agar Formspree sempat memproses submit
+    setTimeout(() => {
+      form.reset(); // Menghapus semua input
+    }, 1000); // 1 detik delay cukup
+  });
+</script>
 
 </body>
 </html>
