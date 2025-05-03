@@ -13,7 +13,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #043d8a;
+  background-color: #043d8a; /* Warna biru */
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -25,6 +25,25 @@ body {
   width: 100%;
   color: white;
   z-index: 999;
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 0;
+}
+
+.navbar > * {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar .logo img {
+  height: 40px;
 }
 
 .nav-links {
@@ -46,6 +65,7 @@ body {
   display: inline-block;
   box-shadow: 0 4px 0 #00055e;
   transition: all 0.2s ease-in-out;
+  border: none;
 }
 
 .nav-links li a:hover {
@@ -54,19 +74,30 @@ body {
   background: linear-gradient(to bottom, #0009b2, #00058f);
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+
 /* Hero Section */
 .hero {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Menyusun elemen di tengah */
+  align-items: center; /* Menyusun elemen di tengah secara vertikal */
   padding: 4rem 2rem;
   background-color: #e6f0ff;
   gap: 2rem;
-  margin-top: 70px;
+  margin-top: 70px; /* Added margin-top */
 }
 
-.hero h1, .hero p, .hero a {
+.hero h1,
+.hero p,
+.hero a {
   color: #000;
 }
 
@@ -104,6 +135,39 @@ body {
   border-radius: 10px;
 }
 
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    margin-top: 100px; /* Menyesuaikan margin untuk tampilan mobile */
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    margin-top: 1.5rem;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.hero {
+  padding-top: 120px; /* Fixed padding issue */
+}
+
 /* Features Section */
 .features {
   display: flex;
@@ -112,18 +176,6 @@ body {
   padding: 60px 20px;
   background-color: #f9f9f9;
   gap: 20px;
-  text-align: center;
-}
-
-.features h2 {
-  font-size: 2.5rem;
-  color: #333;
-  font-weight: 700;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  width: 100%; /* Ensures header spans across */
-  text-align: center;
 }
 
 .feature {
@@ -138,35 +190,113 @@ body {
   margin-bottom: 10px;
 }
 
-/* Responsif untuk mobile */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    padding: 2rem 1rem;
-    margin-top: 100px;
-  }
+/* Portfolio Section */
+.portfolio {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
 
-  .hero h1 {
-    font-size: 1.8rem;
-  }
+.portfolio h2 {
+  margin-bottom: 40px;
+}
 
-  .hero p {
-    font-size: 1rem;
-  }
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
 
-  .hero-image {
-    margin-top: 1.5rem;
-  }
+/* Portfolio Card with Dotted Border and Centered Text */
+.portfolio-gallery .card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px dotted #007BFF;
+}
 
-  /* Untuk Features Section di Mobile */
-  .features {
-    flex-direction: column; /* Mengubah arah menjadi kolom */
-    text-align: center;
-  }
+.portfolio-gallery .card h3 {
+  color: #007BFF;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
 
-  .feature {
-    margin-bottom: 20px; /* Memberikan jarak antar feature */
-  }
+.portfolio-gallery .card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.portfolio-gallery .card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Pricing Section */
+.pricing {
+  padding: 60px 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.pricing h2 {
+  margin-bottom: 40px;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #ccc;
 }
 
 /* Konsultasi Button */
@@ -174,7 +304,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #28a745;
+  background-color: #28a745; /* Warna hijau */
   color: white;
   padding: 12px 20px;
   border-radius: 50px;
@@ -189,32 +319,185 @@ body {
 }
 
 .konsultasi-button:hover {
-  background-color: #218838;
+  background-color: #218838; /* Warna hijau lebih gelap saat hover */
   transform: scale(1.1);
 }
 
-/* Card Styling */
-.card {
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Inter', sans-serif;
+.konsultasi-button i {
+  font-size: 20px;
 }
 
-.features {
+/* Animasi Fade In */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Animation */
+@keyframes fadeInUpScroll {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+  animation: fadeInUpScroll 0.8s ease-out forwards;
+}
+
+/* Section Spacing */
+section {
+  padding: 60px 20px;
+}
+
+section + section {
+  margin-top: 40px;
+  border-top: 1px dashed #ccc;
+  padding-top: 60px;
+}
+
+#form-request {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.form-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+}
+
+.form-card h2 {
+  margin-bottom: 30px;
   text-align: center;
+  color: #007BFF;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  margin-right: 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero {
+  padding-top: 120px; /* Fixed padding issue */
+}
+
+
+/* Card Styling */
+.card {
+  width: 100%; /* Membuat card mengambil lebar penuh */
+  max-width: 800px; /* Maksimal lebar card 800px */
+  margin: 20px auto; /* Memberikan jarak atas dan bawah serta auto margin untuk center */
+  padding: 20px; /* Memberikan padding di dalam card */
+  background-color: #f9f9f9; /* Warna latar belakang card */
+  border-radius: 8px; /* Menambahkan sudut membulat pada card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  font-family: 'Inter', sans-serif; /* Menggunakan font Inter */
+}
+
+.hero-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px; /* Padding tambahan untuk hero card */
+}
+
+.hero-text {
+  max-width: 1000px; /* Membatasi lebar text hero agar tidak terlalu panjang */
+  margin: 0 auto;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Tombol dengan latar belakang hijau */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #45a049; /* Efek hover untuk tombol */
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.features {
+  text-align: center; /* Memastikan teks di dalam section berada di tengah */
 }
 
 .features h2 {
   font-size: 2rem;
   color: #333;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 30px; /* Memberi jarak antara header dan fitur */
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-top: 20px;
+  padding-top: 20px; /* Memberikan sedikit padding di atas untuk penataan */
 }
