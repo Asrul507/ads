@@ -85,15 +85,14 @@ body {
 
 /* Hero Section */
 .hero {
-  background: #dad8f2;
-  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #000;
-  padding: 0 20px;
-  margin-top: 70px; /* Added margin-top to push it down */
+  flex-wrap: wrap;
+  justify-content: center; /* Menyusun elemen di tengah */
+  align-items: center; /* Menyusun elemen di tengah secara vertikal */
+  padding: 4rem 2rem;
+  background-color: #e6f0ff;
+  gap: 2rem;
+  margin-top: 70px; /* Added margin-top */
 }
 
 .hero h1,
@@ -103,15 +102,17 @@ body {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #004aad;
   opacity: 0;
   animation: fadeInUp 1s forwards;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
   opacity: 0;
   animation: fadeInUp 1.5s forwards;
   animation-delay: 0.5s;
@@ -121,19 +122,50 @@ body {
   max-width: 600px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.hero-image {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
 }
 
-.btn:hover {
-  background-color: #0056b3;
-  transform: translateY(-5px);
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    margin-top: 100px; /* Menyesuaikan margin untuk tampilan mobile */
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    margin-top: 1.5rem;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.hero {
+  padding-top: 120px; /* Fixed padding issue */
 }
 
 /* Features Section */
@@ -404,76 +436,5 @@ section + section {
 }
 
 .hero {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 4rem 2rem;
-  background-color: #e6f0ff;
-  gap: 2rem;
-  margin-top: 70px; /* Added margin-top */
-}
-
-.hero-text {
-  flex: 1;
-  min-width: 280px;
-  max-width: 600px;
-}
-
-.hero h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-  color: #004aad;
-}
-
-.hero p {
-  font-size: 1.05rem;
-  margin-bottom: 1.2rem;
-  line-height: 1.6;
-}
-
-.hero-image {
-  flex: 1;
-  min-width: 250px;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Responsif untuk mobile */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    padding: 2rem 1rem;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero-image {
-    margin-top: 1.5rem;
-  }
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-}
-
-.hero {
   padding-top: 120px; /* Fixed padding issue */
 }
-
