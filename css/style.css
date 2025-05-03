@@ -13,7 +13,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background: url('../images/background nav.png') center/cover no-repeat;
+  background: url('../images/backgroundnav.png') center/cover no-repeat;
   padding: 10px 20px;
   display: flex;
   align-items: center;
