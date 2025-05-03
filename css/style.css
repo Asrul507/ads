@@ -15,7 +15,7 @@ body {
 .navbar {
   background: url('../images/backgroundnav.png') no-repeat center center;
   background-size: 100% 100%; /* Mengubah gambar untuk mengisi seluruh navbar */
-  padding: 20px 40px;  /* Meningkatkan padding untuk navbar yang lebih tinggi */
+  padding: 40px 80px;  /* Meningkatkan padding untuk navbar yang lebih tinggi */
   display: flex;
   align-items: center;
   justify-content: space-between;
