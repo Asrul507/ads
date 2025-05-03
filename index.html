@@ -4,85 +4,193 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apps Developer System</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-
-  <!-- Header / Navbar -->
   <header>
-    <nav class="navbar">
-      <img src="images/logo.png" alt="Logo SmartSheet" class="logo">
-      <ul class="nav-links">
-        <li><a href="#beranda">Beranda</a></li>
-        <li><a href="#portofolio">Project</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="navbar">
+    <img src="images/logo.png" alt="Logo SmartSheet" class="logo">
+    <ul class="nav-links">
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#portofolio">Project</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- Hero Section -->
-  <section class="hero scroll-animate" id="beranda">
-    <div class="hero-card">
-      <div class="hero-text">
-        <h1>Buat System Aplikasi untuk Usahamu Sendiri Tanpa Ribet</h1>
 
-        <!-- Card Penjelasan -->
-        <div class="card">
-          <p><strong>Apa itu AppSheet?</strong><br>
-            AppSheet adalah platform <em>no-code</em> milik Google yang memungkinkan siapa saja membuat aplikasi berbasis data tanpa harus memiliki kemampuan pemrograman.
-          </p>
-          <p>AppSheet cocok untuk otomatisasi kerja, pelaporan real-time, dan integrasi Google Workspace.</p>
-        </div>
+ <section class="hero" id="beranda">
+  <div class="hero-card">
+    <div class="hero-text">
+      <h1>Buat System Aplikasi untuk Usahamu Sendiri Tanpa Ribet</h1>
 
-        <div class="card">
-          <p><strong>Kenapa Harus Menggunakan AppSheet?</strong><br>
-            1. <strong>Tanpa Coding</strong> – Buat aplikasi hanya dengan Google Sheets.<br>
-            2. <strong>Hemat Biaya</strong> – Fitur profesional tanpa biaya besar.<br>
-            3. <strong>Fleksibel</strong> – Disesuaikan dengan kebutuhan Anda.
-          </p>
-        </div>
-
-        <!-- CTA -->
-        <a href="#form-request" class="cta-button">Pelajari Lebih Lanjut</a>
+      <!-- Card untuk Paragraf 1: Apa itu AppSheet -->
+      <div class="card">
+        <p>
+          <strong>Apa itu AppSheet?</strong><br>
+          AppSheet adalah platform <em>no-code</em> milik Google yang memungkinkan siapa saja membuat aplikasi berbasis data tanpa harus memiliki kemampuan pemrograman.
+        </p>
+        <p>
+          AppSheet cocok untuk otomatisasi kerja, pelaporan real-time, dan integrasi Google Workspace.
+        </p>
       </div>
+
+      <!-- Card untuk Paragraf 2: Kenapa Harus Menggunakan AppSheet -->
+      <div class="card">
+        <p>
+          <strong>Kenapa Harus Menggunakan AppSheet?</strong><br>
+          1. <strong>Tanpa Coding</strong> – Buat aplikasi hanya dengan Google Sheets.<br>
+          2. <strong>Hemat Biaya</strong> – Fitur profesional tanpa biaya besar.<br>
+          3. <strong>Fleksibel</strong> – Disesuaikan dengan kebutuhan Anda.
+        </p>
+      </div>
+
+      <!-- Tombol Aksi -->
+      <a href="#form-request" class="cta-button">Pelajari Lebih Lanjut</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Features Section -->
-  <section class="features-section scroll-animate" id="features">
-    <h2 class="features-header">Kenapa harus di ADS?</h2>
-    <div class="features">
-      <div class="feature">
-        <i class="fas fa-money-bill-wave"></i>
-        <h3>Biaya Murah</h3>
-        <p>Jasa pembuatan aplikasi AppSheet dengan biaya terjangkau.</p>
-      </div>
-      <div class="feature">
-        <i class="fas fa-bolt"></i>
-        <h3>Pengerjaan Cepat</h3>
-        <p>Proses pembuatan aplikasi yang cepat, efisien, dan fleksibel.</p>
-      </div>
-      <div class="feature">
-        <i class="fas fa-smile"></i>
-        <h3>Pelayanan Ramah</h3>
-        <p>Pelayanan 24 jam untuk membantu kebutuhan aplikasi Anda.</p>
-      </div>
+
+
+<section class="features-section">
+  <h2 class="features-header">Kenapa harus di ADS?</h2>
+  <div class="features">
+    <div class="feature">
+      <i class="fas fa-money-bill-wave"></i>
+      <h3>Biaya Murah</h3>
+      <p>Jasa pembuatan aplikasi AppSheet dengan biaya terjangkau.</p>
     </div>
-  </section>
+    <div class="feature">
+      <i class="fas fa-bolt"></i>
+      <h3>Pengerjaan Cepat</h3>
+      <p>Proses pembuatan aplikasi yang cepat, efisien, dan fleksibel.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-smile"></i>
+      <h3>Pelayanan Ramah</h3>
+      <p>Pelayanan 24 jam untuk membantu kebutuhan aplikasi Anda.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Portfolio Section -->
-  <section id="portofolio" class="portfolio">
-    <h2>Jenis sistem Aplikasi yang siap kami buatkan :</h2>
-    <div class="portfolio-gallery">
-      <div class="card scroll-animate">
-        <h3>System management perhotelan</h3>
-        <p>Kelola database tamu dan kamar, check in dan check out, serta pelaporan yang lebih simple.</p>
-        <img src="images/portfolio1.png" alt="System perhotelan/guest
+
+ <section id="portofolio" class="portfolio">
+  <h2>Jenis sistem Aplikasi yang siap kami buatkan :</h2>
+  <div class="portfolio-gallery">
+    <div class="card scroll-animate">
+      <h3>System management perhotelan</h3>
+      <p>Kelola database tamu dan kamar, check in dan check out, serta pelaporan yang lebih simple.</p>
+      <img src="images/portfolio1.png" alt="System perhotelan/guest house" />
+    </div>
+    <div class="card scroll-animate">
+      <h3>Kasir toko atau warung</h3>
+      <p>Aplikasi kasir untuk warung dan UMKM, mendukung berbagai metode pembayaran dan laporan harian.</p>
+      <img src="images/portfolio2.png" alt="Kasir toko atau warung" />
+    </div>
+    <div class="card scroll-animate">
+      <h3>Inventory dan stok barang</h3>
+      <p>Pantau stok masuk dan keluar dengan laporan otomatis yang akurat.</p>
+      <img src="images/portfolio3.png" alt="inventory stock" />
+    </div>
+    <div class="card scroll-animate">
+      <h3>Absensi Karyawan</h3>
+      <p>Absensi via foto, barcode, atau NFC dengan log lokasi dan waktu.</p>
+      <img src="images/portfolio4.png" alt="absensi dengan foto, barcode, NFC" />
+    </div>
+    <div class="card scroll-animate">
+      <h3>Layanan Kustom</h3>
+      <p>Butuh aplikasi lain? Kami bisa bantu bangun sistem sesuai kebutuhan usahamu.</p>
+      <img src="images/portfolio5.png" alt="Aplikasi custom lainnya" />
+    </div>
+  </div>
+</section>
+
+ <section id="pricing" class="pricing">
+  <h2>Harga Jasa Pembuatan AppSheet</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <div class="card-3d" data-tilt>
+      <h3>Starter</h3>
+      <p>System/aplikasi pemula 1–5 sheet</p>
+      <p>Mulai buat aplikasi AppSheetmu dari yang paling simpel.</p>
+    </div>
+    <div class="card-3d" data-tilt>
+      <h3>Advance</h3>
+      <p>Lebih fleksibel dengan action dan workflow dasar</p>
+    </div>
+    <div class="card-3d" data-tilt>
+      <h3>Complex</h3>
+      <p>Gunakan automation dan formula lanjutan</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="form-request">
+  <div class="form-card">
+    <h2>Form Konsultasi</h2>
+    <form action="https://formspree.io/f/mdkgewkn" method="POST">
+      <div class="form-group">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="whatsapp">Nomor WhatsApp</label>
+        <input type="tel" id="whatsapp" name="whatsapp" required>
+      </div>
+      <div class="form-group">
+        <label for="jenis">Jenis Aplikasi yang Diinginkan</label>
+        <textarea id="jenis" name="jenis" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn">Kirim Permintaan</button>
+    </form>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Appsheet Developer System</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  <!-- Konsultasi Button -->
+  <a href="#form-request" class="konsultasi-button">
+    <i class="fa fa-envelope"></i> Konsultasi dengan Kami
+  </a>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+</script>
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function(event) {
+    // Tunggu sebentar agar Formspree sempat memproses submit
+    setTimeout(() => {
+      form.reset(); // Menghapus semua input
+    }, 1000); // 1 detik delay cukup
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+</body>
+</html>
