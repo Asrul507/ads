@@ -14,7 +14,7 @@ body {
 /* Navbar */
 .navbar {
   background-color: #004aad; /* Warna biru */
-  padding: 0;
+  padding: 80px 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
