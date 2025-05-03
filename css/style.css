@@ -488,3 +488,16 @@ section + section {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.features {
+  text-align: center; /* Memastikan teks di dalam section berada di tengah */
+}
+
+.features h2 {
+  font-size: 2rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 30px; /* Memberi jarak antara header dan fitur */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 20px; /* Memberikan sedikit padding di atas untuk penataan */
+}
