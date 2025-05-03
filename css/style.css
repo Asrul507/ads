@@ -387,6 +387,31 @@ footer {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.pricing-card {
+  flex: 1 1 300px;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .pricing-card {
+    flex: 1 1 100%;
+  }
+}
+
+
 .scroll-animate.visible {
   animation: fadeInUpScroll 0.8s ease-out forwards;
 }
